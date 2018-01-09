@@ -164,7 +164,7 @@ _.returnFile = function(file) {
 
     var button, win, fileURL = file.substr
         ? file : _.uploadURL + "/" + _.dir + "/" + file.data('name');
-    fileURL = $.$.escapeDirs(fileURL);
+    fileURL = $.$.escapeDirs(fileURL).substring(1);
 
     if (_.opener.name == "ckeditor") {
         _.opener.CKEditor.object.tools.callFunction(_.opener.CKEditor.funcNum, fileURL, "");

@@ -762,6 +762,7 @@ class uploader {
     }
 
     protected function callBack_ckeditor($url, $message) {
+		$url = substr($url, 1);
         $CKfuncNum = isset($this->opener['CKEditor']['funcNum']) ? $this->opener['CKEditor']['funcNum'] : 0;
         if (!$CKfuncNum) $CKfuncNum = 0;
         return "<script type='text/javascript'>
